@@ -1,17 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, {Component} from 'react';
+import Title from './Components/Title';
+import Gretting from './Components/Greeting';
+import Gallery from './Components/Gallery';
+import Location from './Components/Location'; 
+import CongratulatoryMoney from './Components/CongratulatoryMoney';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Wedding Invitation Start
-        </p>
-       
-      </header>
+      <Title/>
+      <Gretting/>
+      <Gallery/>
+      <Location/>
+      <CongratulatoryMoney/>
     </div>
   );
 }
