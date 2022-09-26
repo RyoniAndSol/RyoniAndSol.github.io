@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, {Component} from 'react';
+import React from 'react';
 import Title from './Components/Title';
 import Gretting from './Components/Greeting';
 import Gallery from './Components/Gallery';
