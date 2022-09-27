@@ -50,7 +50,7 @@ function Visitor() {
           <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
           <Title>방명록</Title>
         </Divider>
-            <GuestButton onClick={()=>{setGuest(current=>!current)}}>방명록 열기</GuestButton>
+            <GuestButton onClick={()=>{setGuest(current=>!current)}}>{useGuest==true? "방명록 닫기":"방명록 열기"}</GuestButton>
             <br></br>
             <br></br>
             {useGuest == true ? <Disqus.DiscussionEmbed shortname={discusShortName} config={discusConfig}/> : null}

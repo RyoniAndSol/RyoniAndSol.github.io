@@ -78,12 +78,12 @@ const Location = () => {
       {/* <KakaoMap id='myMap'/> */}
       {/* <Image src={LocationMap} /> */}
       <div id='myMap' style={{
-             width: '60%', 
-            height: '600px',
+             width: '100%', 
+            height: '500px',
              objectPosition: 'center center',
              textAlign :'center',
-             margin: 'auto',
-            padding: '42px'
+            //  margin: '0 auto',
+            
          }}></div>
         <Content>
         <br></br>
