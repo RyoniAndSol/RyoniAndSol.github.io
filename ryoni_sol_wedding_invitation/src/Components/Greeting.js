@@ -64,9 +64,11 @@ const Gretting = () => {
         <br></br>
       </Content>
       <GroomBride>
-        {GROOM_FATHER_NAME} · {GROOM_MOTHER_NAME}의 아들 {GROOM_NAME}
+        <b>{GROOM_FATHER_NAME}</b> · <b>{GROOM_MOTHER_NAME}</b>의 아들 <b>{GROOM_NAME}</b>
         <br />
-        {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 딸 {BRIDE_NAME}
+        <b>{BRIDE_FATHER_NAME}</b> · <b>{BRIDE_MOTHER_NAME}</b>의 <span style={{padding: "5px"}}></span>딸<span style={{padding: "5px"}}></span>  <b>{BRIDE_NAME}</b>
+        <br></br>
+        <br></br>
       </GroomBride>
     </Wrapper>
   );
