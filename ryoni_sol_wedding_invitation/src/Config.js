@@ -1,6 +1,6 @@
 export const WEDDING_INVITATION_URL = 'https://ryoniandsol.github.io';
-export const KAKAOTALK_API_TOKEN = '카카오톡 API 토큰을 입력해주세요!';
-export const KAKAOTALK_SHARE_IMAGE = '카카오톡으로 공유할 때 사용되는 대표이미지 URL을 입력해주세요!';
+export const KAKAOTALK_API_TOKEN = '4d784366e2846411c4e7496e0f19b312';
+export const KAKAOTALK_SHARE_IMAGE = 'Assets/IMG_1036.jpg';
 
 export const WEDDING_DATE = '2022년 12월 17일, 토요일 오후 1시 20분';
 export const WEDDING_LOCATION = '코리아디자인센터 웨딩홀';

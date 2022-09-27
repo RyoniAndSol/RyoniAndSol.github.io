@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Divider, message,Modal } from 'antd';
-import { CheckCircleTwoTone } from '@ant-design/icons';
+import { SmileTwoTone } from '@ant-design/icons';
 import styled from 'styled-components';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import {
@@ -113,12 +113,12 @@ const CongratulatoryMoney_origin = () => {
       </Divider>
       <Content>축하의 마음을 담아 축의금을 전달해 보세요.</Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
-        <CheckCircleTwoTone style={{ fontSize: 64, marginBottom: 16 }} twoToneColor="#829fe0" />
+        <SmileTwoTone style={{ fontSize: 64, marginBottom: 16 }} twoToneColor="#829fe0" />
         <br />
         <SubContent>신랑측 계좌번호 확인</SubContent>
       </ContactButton>
       <ContactButton onClick={() => setBrideVisible(true)}>
-        <CheckCircleTwoTone style={{ fontSize: 64, marginBottom: 16 }} twoToneColor="#fe7daf" />
+        <SmileTwoTone style={{ fontSize: 64, marginBottom: 16 }} twoToneColor="#fe7daf" />
         <br />
         <SubContent>신부측 계좌번호 확인</SubContent>
       </ContactButton>

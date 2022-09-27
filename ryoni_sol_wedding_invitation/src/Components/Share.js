@@ -17,7 +17,7 @@ import GroovePaper from '../Assets/GroovePaper.png';
 //     Kakao: any;
 //   }
 // }
-
+const { Kakao } = window;
 const Wrapper = styled.div`
   background: #efebe9;
   background-image: url(${GroovePaper});
@@ -68,13 +68,52 @@ const LinkShareButton = styled(Button)`
 `;
 
 const Share = () => {
-  const [shareCount, setShareCount] = React.useState<number>(0);
+  const [shareCount, setShareCount] = React.useState(0);
 
-  React.useEffect(() => {
-    if (shareCount !== 0) {
-      window.Kakao.Link.createDefaultButton({
-        objectType: 'feed',
-        container: '#sendKakao',
+  // React.useEffect(() => {
+  //   if (shareCount !== 0) {
+  //     kakao.Share.createDefaultButton({
+  //       objectType: 'feed',
+  //       container: '#sendKakao',
+  //       content: {
+  //         title: `${GROOM_NAME}❤${BRIDE_NAME} 결혼식에 초대합니다`,
+  //         description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
+  //         imageUrl: KAKAOTALK_SHARE_IMAGE,
+  //         link: {
+  //           mobileWebUrl: WEDDING_INVITATION_URL,
+  //           webUrl: WEDDING_INVITATION_URL,
+  //         },
+  //       },
+  //       buttons: [
+  //         {
+  //           title: '청첩장 열기',
+  //           link: {
+  //             mobileWebUrl: WEDDING_INVITATION_URL,
+  //             webUrl: WEDDING_INVITATION_URL,
+  //           },
+  //         },
+  //       ],
+  //       installTalk: true,
+  //     });
+  //     setTimeout(() => {
+  //       document.getElementById('sendKakao').click();
+  //       message.success('카카오톡으로 청첩장을 공유합니다!');
+  //     }, 100);
+  //   } else {
+  //     //kakao.init(KAKAOTALK_API_TOKEN);
+  //   }
+  // }, [shareCount]);
+
+  const ShareMessage = ()=>{
+
+    if(Kakao.isInitialized()==false)
+    {
+      Kakao.init(KAKAOTALK_API_TOKEN);
+    }
+
+    Kakao.Share.sendDefault({
+             objectType: 'feed',
+        
         content: {
           title: `${GROOM_NAME}❤${BRIDE_NAME} 결혼식에 초대합니다`,
           description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
@@ -93,16 +132,24 @@ const Share = () => {
             },
           },
         ],
-        installTalk: true,
+       
       });
-      setTimeout(() => {
-        document.getElementById('sendKakao')?.click();
-        message.success('카카오톡으로 청첩장을 공유합니다!');
-      }, 100);
-    } else {
-      window.Kakao.init(KAKAOTALK_API_TOKEN);
+
+   
+  }
+
+  const SharedTemplateMessage=()=>{
+
+    if(Kakao.isInitialized()==false)
+    {
+      Kakao.init(KAKAOTALK_API_TOKEN);
     }
-  }, [shareCount]);
+
+    Kakao.Share.sendCustom({
+      templateId: 83457,
+    });
+  }
+  
 
   return (
     <Wrapper>
@@ -114,7 +161,7 @@ const Share = () => {
         icon={<MessageFilled />}
         id="sendKakao"
         size="large"
-        onClick={() => setShareCount(shareCount + 1)}
+        onClick={SharedTemplateMessage}
       >
         카카오톡으로 공유하기
       </KakaoTalkShareButton>

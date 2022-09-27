@@ -1,6 +1,7 @@
 import Disqus from 'disqus-react'
 import React from 'react';
 import styled from 'styled-components';
+import { Divider,Button } from 'antd';
 
 const discusShortName='https-ryoniandsol-github-io'
 const discusConfig=
@@ -17,6 +18,28 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 
+const Title = styled.p`
+  font-size: 2vh;
+  font-weight: bold;
+  opacity: 0.85;
+  margin-bottom: 0;
+`;
+
+const GuestButton = styled(Button)`
+  background: #53acee;
+  border-color: #53acee;
+  color: #ffffff;
+  &:hover {
+    background-color: #9fcbed !important;
+    border-color: #9fcbed !important;
+    color: #ffffff !important;
+  }
+  &:focus {
+    background-color: #9fcbed !important;
+    border-color: #9fcbed !important;
+    color: #ffffff !important;
+  }
+`;
 
 function Visitor() {
 
@@ -24,7 +47,12 @@ function Visitor() {
 
     return (
         <Wrapper>
-            <button onClick={()=>{setGuest(current=>!current)}}>방명록 열기</button>
+          <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+          <Title>방명록</Title>
+        </Divider>
+            <GuestButton onClick={()=>{setGuest(current=>!current)}}>방명록 열기</GuestButton>
+            <br></br>
+            <br></br>
             {useGuest == true ? <Disqus.DiscussionEmbed shortname={discusShortName} config={discusConfig}/> : null}
         </Wrapper>
     );

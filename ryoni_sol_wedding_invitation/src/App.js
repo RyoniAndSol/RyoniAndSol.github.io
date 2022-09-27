@@ -7,7 +7,7 @@ import Gallery from './Components/Gallery';
 import Location from './Components/Location'; 
 import CongratulatoryMoney from './Components/CongratulatoryMoney';
 import Visitor from './Components/Visitor';
-
+import Share from './Components/Share';
 
 
 
@@ -19,6 +19,7 @@ function App() {
       <Gallery/>
       <Location/>
       <CongratulatoryMoney/>
+      <Share/>
       <Visitor/>
     </div>
     
