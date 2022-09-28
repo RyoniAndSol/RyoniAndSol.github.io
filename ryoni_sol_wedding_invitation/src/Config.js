@@ -8,10 +8,14 @@ export const WEDDING_LOCATION = '코리아디자인센터 웨딩홀';
 export const GROOM_NAME = '을연';
 export const GROOM_ACCOUNT_NUMBER = '3333-06-3270656 카카오뱅크';
 export const GROOM_FATHER_NAME = '조남걸';
+export const GROOM_FATHER_ACCOUNT_NUMBER = '183-02-275740 농협';
 export const GROOM_MOTHER_NAME = '양미선';
+export const GROOM_MOTHER_ACCOUNT_NUMBER = '183-02-502861 농협';
 
 export const BRIDE_NAME = '한솔';
 export const BRIDE_ACCOUNT_NUMBER = '3333-19-8629077 카카오뱅크';
 export const BRIDE_FATHER_NAME = '장봉익';
+export const BRIDE_FATHER_ACCOUNT_NUMBER = '3333-06-3270656 카카오뱅크';
 export const BRIDE_MOTHER_NAME = '김금숙';
+export const BRIDE_MOTHER_ACCOUNT_NUMBER = '3333-06-3270656 카카오뱅크';
 

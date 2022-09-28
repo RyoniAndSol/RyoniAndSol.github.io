@@ -6,9 +6,18 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import {
   GROOM_NAME,
   GROOM_ACCOUNT_NUMBER,
+  GROOM_FATHER_NAME,
+  GROOM_MOTHER_NAME,
+  GROOM_FATHER_ACCOUNT_NUMBER,
+  GROOM_MOTHER_ACCOUNT_NUMBER,
   BRIDE_NAME,
   BRIDE_ACCOUNT_NUMBER,
+  BRIDE_FATHER_NAME,
+  BRIDE_MOTHER_NAME,
+  BRIDE_FATHER_ACCOUNT_NUMBER,
+  BRIDE_MOTHER_ACCOUNT_NUMBER
 } from '../Config';
+
 import GroovePaper from '../Assets/GroovePaper.png';
 
 const Wrapper = styled.div`
@@ -132,6 +141,33 @@ const CongratulatoryMoney_origin = () => {
         footer={[<Description>계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.</Description>]}
       >
         
+        
+        <div>
+          <b>부) {GROOM_FATHER_NAME}</b>
+          <Divider type="vertical" />
+          <CopyToClipboard text={GROOM_FATHER_ACCOUNT_NUMBER}>
+            <Button
+              type="text"
+              style={{ padding: 0, margin: 0 }}
+              onClick={() => message.success('계좌번호가 복사되었습니다.')}
+            >
+              {GROOM_FATHER_ACCOUNT_NUMBER}
+            </Button>
+          </CopyToClipboard>
+        </div>
+        <div style={{ marginTop: 24, marginBottom: 24 }}>
+          <b>모) {GROOM_MOTHER_NAME}</b>
+          <Divider type="vertical" />
+          <CopyToClipboard text={GROOM_MOTHER_ACCOUNT_NUMBER}>
+            <Button
+              type="text"
+              style={{ padding: 0, margin: 0 }}
+              onClick={() => message.success('계좌번호가 복사되었습니다.')}
+            >
+              {GROOM_MOTHER_ACCOUNT_NUMBER}
+            </Button>
+          </CopyToClipboard>
+        </div>
         <div>
           <b>신랑 {GROOM_NAME}</b>
           <Divider type="vertical" />
@@ -145,6 +181,7 @@ const CongratulatoryMoney_origin = () => {
             </Button>
           </CopyToClipboard>
         </div>
+
       </Modal>
       <Modal
         title={<b>신부측 계좌번호</b>}
@@ -157,6 +194,33 @@ const CongratulatoryMoney_origin = () => {
       >
         
        
+        
+        <div>
+          <b>부) {BRIDE_FATHER_NAME}</b>
+          <Divider type="vertical" />
+          <CopyToClipboard text={BRIDE_FATHER_ACCOUNT_NUMBER}>
+            <Button
+              type="text"
+              style={{ padding: 0, margin: 0 }}
+              onClick={() => message.success('계좌번호가 복사되었습니다.')}
+            >
+              {BRIDE_FATHER_ACCOUNT_NUMBER}
+            </Button>
+          </CopyToClipboard>
+        </div>
+        <div style={{ marginTop: 24, marginBottom: 24 }}>
+          <b>모) {BRIDE_MOTHER_NAME}</b>
+          <Divider type="vertical" />
+          <CopyToClipboard text={BRIDE_MOTHER_ACCOUNT_NUMBER}>
+            <Button
+              type="text"
+              style={{ padding: 0, margin: 0 }}
+              onClick={() => message.success('계좌번호가 복사되었습니다.')}
+            >
+              {BRIDE_MOTHER_ACCOUNT_NUMBER}
+            </Button>
+          </CopyToClipboard>
+        </div>
         <div>
           <b>신부 {BRIDE_NAME}</b>
           <Divider type="vertical" />
