@@ -15,7 +15,7 @@ export const GROOM_MOTHER_ACCOUNT_NUMBER = '183-02-502861 농협';
 export const BRIDE_NAME = '한솔';
 export const BRIDE_ACCOUNT_NUMBER = '3333-19-8629077 카카오뱅크';
 export const BRIDE_FATHER_NAME = '장봉익';
-export const BRIDE_FATHER_ACCOUNT_NUMBER = '3333-06-3270656 카카오뱅크';
+export const BRIDE_FATHER_ACCOUNT_NUMBER = '110-354-834533 신한';
 export const BRIDE_MOTHER_NAME = '김금숙';
-export const BRIDE_MOTHER_ACCOUNT_NUMBER = '3333-06-3270656 카카오뱅크';
+export const BRIDE_MOTHER_ACCOUNT_NUMBER = '302-0028-0946-61 농협';
 

@@ -52,10 +52,11 @@ const SubContent = styled.p`
 `;
 
 const Description = styled.p`
-  font-size: 1.75vh;
+  font-size: 1.4vh;
   line-height: 1.75;
   opacity: 0.65;
   margin-top: 8px;
+  text-align: center;
 `;
 
 const ContactButton = styled.div`
@@ -209,7 +210,7 @@ const CongratulatoryMoney_origin = () => {
           </CopyToClipboard>
         </div>
         <div style={{ marginTop: 24, marginBottom: 24 }}>
-          <b>모) {BRIDE_MOTHER_NAME}</b>
+          <b>모) 김금섭</b>
           <Divider type="vertical" />
           <CopyToClipboard text={BRIDE_MOTHER_ACCOUNT_NUMBER}>
             <Button
