@@ -72,7 +72,7 @@ const Gallery = () => {
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>Gallery</Title>
       </Divider>
-      <ImageGallery showPlayButton={false} showFullscreenButton={false} items={images} />
+      <ImageGallery showPlayButton={false} showFullscreenButton={true} items={images} />
      
     </Wrapper>
    
